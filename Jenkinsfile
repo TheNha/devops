@@ -10,7 +10,7 @@ pipeline{
         // stage 1. Build
         stage ('Build'){
             steps {
-                echo 'Build not need.Zip'
+                echo 'Build zip'
                 sh 'zip -r main.zip main.py'
             }
         }
