@@ -25,6 +25,7 @@
       source: build
       build:
        path: /home/ansibleadmin
+       pull: yes
       force_tag: yes
       state: present
   - name: run
