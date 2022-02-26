@@ -22,8 +22,10 @@
   - name: build
     docker_image:
       name: pythondocker
-      path: /home/ansibleadmin
-      force: yes
+      source: build
+      build:
+       path: /home/ansibleadmin
+      force_tag: yes
       state: present
   - name: run
     docker_container:
