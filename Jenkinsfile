@@ -31,7 +31,7 @@ pipeline{
         stage ('Deploy to docker'){
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible_ControlNode', 
-                transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook /home/ansibleadmin/deploydocker.yaml -i /etc/ansible/hosts',
+                transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook /home/ansibleadmin/deploydocker.yml -i /etc/ansible/hosts',
                 execTimeout: 120000, flatten: false, 
                 makeEmptyDirs: false, noDefaultExcludes: false, 
                 patternSeparator: '[, ]+', remoteDirectory: '', 
