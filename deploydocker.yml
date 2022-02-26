@@ -27,6 +27,7 @@
        path: /home/ansibleadmin
        pull: yes
       force_tag: yes
+      force_source: yes
       state: present
   - name: run
     docker_container:
